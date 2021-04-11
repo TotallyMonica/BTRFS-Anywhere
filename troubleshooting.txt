@@ -1,0 +1,11 @@
+Problem: I'm unable to connect to my samba server
+Solution: Make sure that you have the correct IP (typically run ip a) in the virtual machine.
+
+Problem: My shares aren't showing any data
+Solution: Make sure that your drives are mounted (run lsblk), your shares are pointing to the right directory (run editsmb and editfstab)
+
+Problem: When creating mountpoints, it keeps asking for my password
+Solution: Make sure you ran as root, typically prefacing it with sudo. 
+
+Problem: After creating my mountpoints, my shares aren't showing up, data isn't showing up, or other misc issues.
+Solution: Rebooting your VM will cause most things to kick into action, but if you cannot reboot the VM then try running mountall then restartsmb.
